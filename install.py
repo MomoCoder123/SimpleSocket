@@ -61,7 +61,7 @@ def recv(socket, maxLen=64, type="str"):
 def newThread(target, args=[]):
 	threading.Thread(target=target, args=args).start()"""
 
-import zipfile, os, sysconfig
+import os, atexit
 
 path = os.path.join(os.path.expanduser("~"), "Documents/site-packages-3/SimpleSocket")
 
@@ -77,7 +77,14 @@ def createFiles():
 	except:
 		raise GeneratorExit("You have already installed SimpleSocket")
 		
+@atexit.register
+def downloaded_SimpleSocket():
+	print("Downloaded Module : SimpleSocket")
+		
 if __name__ == "__main__":
+	print("installed zip, ready to extract")
+	print("zip is extracted")
+	print("downloading module")
 	createFolder()
 	createFiles()
 	exit()
