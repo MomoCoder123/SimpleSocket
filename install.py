@@ -73,9 +73,8 @@ def createFolder():
 		
 def createFiles():
 	initPath = os.path.join(path, "__init__.py")
-	try:
-		with open(initPath, "x") as f:
-			f.write(content)
+	with open(initPath, "x") as f:
+		f.write(content)
 		
 @atexit.register
 def downloaded_SimpleSocket():
