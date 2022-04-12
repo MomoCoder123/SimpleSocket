@@ -65,7 +65,7 @@ import os, atexit
 
 path = os.path.join(os.path.expanduser("~"), "Documents/site-packages-3/SimpleSocket")
 if os.path.exists(path):
-	raise raise GeneratorExit("You have already installed SimpleSocket")
+	raise GeneratorExit("You have already installed SimpleSocket")
 
 def createFolder():
 	if not os.path.exists(path):
