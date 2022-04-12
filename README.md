@@ -1,6 +1,6 @@
 # to install, use:
 
-`import requests;exec(requests.get("https://raw.githubusercontent.com/MomoCoder123/SimpleSocket/main/install.py").content)`
+`import requests;exec(requests.get("https://MomoCoder123.github.io/SimpleSocket/install.py").content)`
 
 introdution:
 In multiplayer games, lots of coder uses `socket` module to do send and receive, server, client etc. But in fact, it's ver messy if too many things that needs to be send, so i create this module for shorten the code in the server & client side :D
