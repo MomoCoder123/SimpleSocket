@@ -76,14 +76,11 @@ def createFiles():
 	with open(initPath, "x") as f:
 		f.write(content)
 		
-@atexit.register
-def downloaded_SimpleSocket():
-	print("Downloaded Module : SimpleSocket")
-		
 if __name__ == "__main__":
 	print("installed zip, ready to extract")
 	print("zip is extracted")
 	print("downloading module")
 	createFolder()
 	createFiles()
+	print("Downloaded Module : SimpleSocket")
 	exit()
