@@ -1,4 +1,4 @@
-import sys, pickle, threading, socket as Socket
+content = """import sys, pickle, threading, socket as Socket
 
 # -- methods
 
@@ -59,4 +59,25 @@ def recv(socket, maxLen=64, type="str"):
 # -- shortens functions
 
 def newThread(target, args=[]):
-	threading.Thread(target=target, args=args).start()
+	threading.Thread(target=target, args=args).start()"""
+
+import zipfile, os, sysconfig
+
+path = os.path.join(os.path.expanduser("~"), "Documents/site-packages-3/SimpleSocket")
+
+def createFolder():
+	if not os.path.exists(path):
+		os.makedirs(path)
+		
+def createFiles():
+	initPath = os.path.join(path, "__init__.py")
+	try:
+		with open(initPath, "x") as f:
+			f.write(content)
+	except:
+		raise GeneratorExit("You have already installed SimpleSocket")
+		
+if __name__ == "__main__":
+	createFolder()
+	createFiles()
+	exit()
